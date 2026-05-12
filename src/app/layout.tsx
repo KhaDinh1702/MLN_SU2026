@@ -1,3 +1,5 @@
+import SmoothScroll from "@/components/SmoothScroll";
+import type { Metadata } from "next";
 import { Domine, IBM_Plex_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -10,7 +12,8 @@ const domine = Domine({
 const ibmPlexSerif = IBM_Plex_Serif({
   variable: "--font-ibm-plex-serif",
   subsets: ["latin", "vietnamese"],
-  weight: ["400", "500", "700"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
 });
 
 const jetbrainsMono = JetBrains_Mono({
@@ -24,7 +27,6 @@ export const metadata: Metadata = {
   description: "Phân tích quan hệ giai cấp trong kỷ nguyên số",
 };
 
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -36,10 +38,16 @@ export default function RootLayout({
       className={`${domine.variable} ${ibmPlexSerif.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
       <head>
-        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+          rel="stylesheet"
+        />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col m-0 p-0 overflow-x-hidden selection:bg-primary selection:text-on-primary">
+        <SmoothScroll>{children}</SmoothScroll>
+      </body>
     </html>
-
   );
 }
+
+
