@@ -8,14 +8,14 @@ export default function LandingPage() {
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, margin: "-100px" },
     transition: { duration: 0.8, ease: "easeOut" },
-  };
+  } as const;
 
   const scaleUp = {
     initial: { opacity: 0, scale: 0.95 },
     whileInView: { opacity: 1, scale: 1 },
     viewport: { once: true },
     transition: { duration: 1, ease: "easeOut" },
-  };
+  } as const;
 
   return (
     <main className="w-full flex flex-col">
