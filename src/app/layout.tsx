@@ -5,7 +5,7 @@ import "./globals.css";
 
 const domine = Domine({
   variable: "--font-domine",
-  subsets: ["latin", "vietnamese"],
+  subsets: ["latin"],
   weight: ["400", "700"],
 });
 
