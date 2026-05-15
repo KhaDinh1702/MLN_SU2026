@@ -1,0 +1,204 @@
+{
+  "main": {
+    "id": "53cff76b55e1dc2d",
+    "type": "split",
+    "children": [
+      {
+        "id": "4ee93a8c44d59b4e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ac10254520757abe",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "TAI_LIEU_TRIET_HOC.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "TAI_LIEU_TRIET_HOC"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "efab5e78c1ee834a",
+    "type": "split",
+    "children": [
+      {
+        "id": "fd6c1b9729bbd528",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6c832c29c1126d70",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "bd3a83aa4a138bbd",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "151d04161883d3bc",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "661e172e860475ee",
+    "type": "split",
+    "children": [
+      {
+        "id": "388c7a4da902e0aa",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f514f2043d8406ed",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "TAI_LIEU_TRIET_HOC.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for TAI_LIEU_TRIET_HOC"
+            }
+          },
+          {
+            "id": "3c7d3a9d1de1a6fc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "TAI_LIEU_TRIET_HOC.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from TAI_LIEU_TRIET_HOC"
+            }
+          },
+          {
+            "id": "d401be9533e28d8c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "c5e15f9c66661d8b",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "11ac51f5cf262131",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "TAI_LIEU_TRIET_HOC.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline of TAI_LIEU_TRIET_HOC"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "ac10254520757abe",
+  "lastOpenFiles": [
+    "src/components/BookCover.tsx",
+    "src/components/AudioPlayer.tsx",
+    "public/Background.mp3",
+    "public/Wall Drill Ambience _ Frostpunk [-bn2ccHz6N0].mp3",
+    "public/Alert.mp3",
+    "public/Frostpunk - Alert Sound With No Voice [ubjB5gN4K6Q].mp3",
+    "public/Working.mp4",
+    "public/algorithmchain.png",
+    "public/videoframe_417.png",
+    "src/components/AutoScrollButton.tsx",
+    "public/machinechain.gif",
+    "node_modules/undici/docs/api/Client.md",
+    "node_modules/is-array-buffer/README.md",
+    "node_modules/next/dist/compiled/regenerator-runtime/README.md",
+    "TAI_LIEU_TRIET_HOC.md"
+  ]
+}

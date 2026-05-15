@@ -36,6 +36,7 @@ export default function RootLayout({
     <html
       lang="vi"
       className={`${domine.variable} ${ibmPlexSerif.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      suppressHydrationWarning
     >
       <head>
         <link

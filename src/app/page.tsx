@@ -1,6 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import AutoScrollButton from "@/components/AutoScrollButton";
+import BookCover from "@/components/BookCover";
+import AudioPlayer from "@/components/AudioPlayer";
 
 export default function LandingPage() {
   const fadeIn = {
@@ -19,12 +22,16 @@ export default function LandingPage() {
 
   return (
     <main className="w-full flex flex-col">
+      <BookCover />
+      {/* Spacer để người dùng phải cuộn 1 màn hình nhằm mở bìa sách */}
+      <div className="h-screen w-full shrink-0"></div>
+
       {/* Subtle Brand Indicator */}
-      <div className="fixed top-margin-page left-margin-page z-50">
+      <div className="fixed top-margin-page left-margin-page z-40">
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
-          className="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-extrabold text-surface drop-shadow-md tracking-tighter mix-blend-difference"
+          className="font-headline-lg text-[10px] md:text-[12px] font-extrabold text-surface drop-shadow-md tracking-tighter mix-blend-difference"
         >
           COLLECTIVE STRUGGLE
         </motion.div>
@@ -57,7 +64,7 @@ export default function LandingPage() {
           <p className="font-data-mono text-data-mono text-surface uppercase tracking-[0.3em] opacity-100">
             Manifesto MCMXVII
           </p>
-          <h1 className="font-headline-xl text-[4rem] md:text-[10rem] text-surface uppercase text-center tracking-tighter drop-shadow-2xl mix-blend-screen text-primary-fixed leading-tight">
+          <h1 className="font-headline-xl text-xs md:text-sm text-surface uppercase text-center tracking-tighter drop-shadow-2xl mix-blend-screen text-primary-fixed leading-tight">
             CUỘN SÁCH
             <br />
             <span className="text-surface">ĐẤU TRANH GIAI CẤP</span>
@@ -202,7 +209,7 @@ export default function LandingPage() {
       <section className="scroll-section w-screen min-h-screen flex flex-col items-center justify-center text-center px-6 relative bg-[#050505] overflow-hidden">
         <div className="absolute inset-0 pointer-events-none z-10 scanlines opacity-20"></div>
         <div className="absolute inset-0 pointer-events-none z-0 noise mix-blend-overlay"></div>
-        
+
         <motion.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 0.5 }}
@@ -210,15 +217,15 @@ export default function LandingPage() {
         >
           CMCN 3.0
         </motion.div>
-        
-        <motion.h1 
+
+        <motion.h1
           {...fadeIn}
           className="font-headline-xl text-[10vw] md:text-[8vw] uppercase leading-[0.9] tracking-tighter text-surface-container-lowest drop-shadow-[0_0_20px_rgba(255,255,255,0.3)]"
         >
-          Kỷ luật<br/>Kỹ thuật số
+          Kỷ luật<br />Kỹ thuật số
         </motion.h1>
-        
-        <motion.div 
+
+        <motion.div
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 font-data-mono text-label-caps tracking-widest opacity-50 uppercase flex flex-col items-center gap-2"
@@ -279,13 +286,13 @@ export default function LandingPage() {
         {/* Hero Section */}
         <div className="relative z-10 w-full flex flex-col items-center">
           <section className="scroll-section min-h-screen flex flex-col items-center justify-center p-margin-page text-center w-full">
-            <motion.h1 
+            <motion.h1
               {...scaleUp}
               className="font-headline-xl text-5xl md:text-7xl lg:text-[8vw] uppercase text-surface-container-lowest font-extrabold tracking-tighter drop-shadow-2xl mb-gutter leading-none"
             >
               The Glass Cage
             </motion.h1>
-            <motion.p 
+            <motion.p
               {...fadeIn}
               className="font-headline-lg-mobile text-primary-fixed max-w-3xl drop-shadow-md"
             >
@@ -295,7 +302,7 @@ export default function LandingPage() {
 
           {/* Text Block 1 */}
           <section className="scroll-section min-h-screen flex items-center justify-center p-margin-page text-center w-full">
-            <motion.h2 
+            <motion.h2
               {...fadeIn}
               className="font-headline-lg text-4xl md:text-6xl lg:text-7xl text-primary font-extrabold max-w-5xl leading-tight uppercase tracking-tight drop-shadow-xl"
             >
@@ -305,7 +312,7 @@ export default function LandingPage() {
 
           {/* Text Block 2 */}
           <section className="scroll-section min-h-screen flex items-center justify-center p-margin-page text-center w-full">
-            <motion.p 
+            <motion.p
               {...fadeIn}
               className="font-body-md text-2xl md:text-4xl lg:text-5xl text-surface-container-lowest max-w-4xl leading-snug drop-shadow-lg"
             >
@@ -315,7 +322,7 @@ export default function LandingPage() {
 
           {/* Text Block 3 */}
           <section className="scroll-section min-h-screen flex items-center justify-center p-margin-page text-center w-full">
-            <motion.p 
+            <motion.p
               {...fadeIn}
               className="font-body-md text-2xl md:text-4xl lg:text-5xl text-surface-variant max-w-4xl leading-snug drop-shadow-lg"
             >
@@ -325,7 +332,7 @@ export default function LandingPage() {
 
           {/* Text Block 4 */}
           <section className="scroll-section min-h-screen flex items-center justify-center p-margin-page text-center w-full">
-            <motion.p 
+            <motion.p
               {...fadeIn}
               className="font-body-md text-2xl md:text-4xl lg:text-5xl text-primary-fixed max-w-5xl leading-snug drop-shadow-lg"
             >
@@ -339,13 +346,13 @@ export default function LandingPage() {
 
       {/* Comparison Title Section */}
       <section className="scroll-section min-h-screen flex flex-col items-center justify-center text-center p-8 relative bg-on-surface">
-        <motion.h1 
+        <motion.h1
           {...scaleUp}
           className="font-headline-xl text-[8vw] md:text-[100px] leading-tight text-surface uppercase tracking-tighter mb-8 drop-shadow-2xl"
         >
-          HAI THẾ KỶ.<br/>MỘT CUỘC CHIẾN.
+          HAI THẾ KỶ.<br />MỘT CUỘC CHIẾN.
         </motion.h1>
-        <motion.p 
+        <motion.p
           {...fadeIn}
           className="font-body-md text-xl md:text-2xl text-tertiary-fixed max-w-3xl mx-auto opacity-80"
         >
@@ -361,70 +368,85 @@ export default function LandingPage() {
         <motion.div {...fadeIn} className="max-w-4xl mx-auto px-4">
           <div className="text-[120px] font-headline-xl text-primary leading-[0.3] mb-8 opacity-50">&quot;</div>
           <blockquote className="font-headline-lg text-3xl md:text-5xl text-surface uppercase tracking-tight leading-snug">
-            Cỗ máy cướp công cụ. <br/>
-            <span className="text-primary">Thuật toán</span> cướp tâm trí. <br/>
+            Cỗ máy cướp công cụ. <br />
+            <span className="text-primary">Thuật toán</span> cướp tâm trí. <br />
             <span className="text-on-surface-variant">Kẻ thù là dữ liệu.</span>
           </blockquote>
         </motion.div>
       </section>
 
-      {/* Comparison Split Section */}
-      <section className="min-h-screen grid grid-cols-1 md:grid-cols-2 relative bg-on-surface">
-        {/* Divider Line (Desktop) */}
-        <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-px bg-primary opacity-20 transform -translate-x-1/2 z-20"></div>
-        
-        {/* 1824 */}
-        <div className="scroll-section min-h-screen bg-on-surface border-b md:border-b-0 border-primary/20 md:pr-12 lg:pr-24 flex flex-col justify-center items-end text-right p-8">
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="max-w-md"
-          >
-            <h2 className="font-headline-xl text-[100px] md:text-[120px] leading-none text-surface-variant opacity-20 mb-4 tracking-tighter">1824</h2>
-            <h3 className="font-label-caps text-lg text-primary uppercase mb-12 tracking-widest">Công Nhân Dệt May</h3>
-            <ul className="space-y-12 font-data-mono text-lg text-surface">
-              <li>
-                <strong className="block text-primary mb-2 opacity-70">PHƯƠNG TIỆN</strong>
-                Máy móc vật lý. Của tư bản.
-              </li>
-              <li>
-                <strong className="block text-primary mb-2 opacity-70">KHUNG GIỜ</strong>
-                Tiếng còi nhà máy. Kỷ luật thép.
-              </li>
-              <li>
-                <strong className="block text-primary mb-2 opacity-70">SỰ THA HÓA</strong>
-                Lặp lại cơ học. Mất kỹ năng.
-              </li>
-            </ul>
-          </motion.div>
-        </div>
+      {/* Comparison Split Section - Image Centric Sticky Scroll */}
+      <section className="relative w-full h-[200vh] bg-[#050505]">
+        <div className="sticky top-0 w-full h-screen flex flex-col md:flex-row overflow-hidden">
 
-        {/* 2024 */}
-        <div className="scroll-section min-h-screen bg-[#1a1101] md:pl-12 lg:pl-24 flex flex-col justify-center items-start text-left p-8">
-          <motion.div 
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="max-w-md"
-          >
-            <h2 className="font-headline-xl text-[100px] md:text-[120px] leading-none text-surface-variant opacity-20 mb-4 tracking-tighter">2024</h2>
-            <h3 className="font-label-caps text-lg text-primary uppercase mb-12 tracking-widest">Lao Động IT Tự Do</h3>
-            <ul className="space-y-12 font-data-mono text-lg text-surface">
-              <li>
-                <strong className="block text-primary mb-2 opacity-70">PHƯƠNG TIỆN</strong>
-                Đám mây số. Tư bản kiểm soát.
-              </li>
-              <li>
-                <strong className="block text-primary mb-2 opacity-70">KHUNG GIỜ</strong>
-                Trực tuyến 24/7. Áp lực vô hình.
-              </li>
-              <li>
-                <strong className="block text-primary mb-2 opacity-70">SỰ THA HÓA</strong>
-                Cắt xén số. Cô lập cá nhân.
-              </li>
-            </ul>
-          </motion.div>
+          {/* 1824 - Left Side */}
+          <div className="relative w-full md:w-1/2 h-1/2 md:h-full group overflow-hidden border-b md:border-b-0 md:border-r border-primary/20 bg-black">
+            {/* Massive Background Image */}
+            <motion.div
+              initial={{ scale: 1.1 }}
+              whileInView={{ scale: 1 }}
+              transition={{ duration: 2 }}
+              className="absolute inset-0 w-full h-full bg-cover bg-center grayscale contrast-125 opacity-70 group-hover:opacity-100 transition-opacity duration-700"
+              style={{ backgroundImage: "url('/machinechain.gif')" }}
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/30 opacity-80 pointer-events-none"></div>
+
+            {/* Minimal Text */}
+            <div className="absolute bottom-8 left-8 md:bottom-16 md:left-16 z-20 pointer-events-none">
+              <h2 className="font-headline-xl text-[80px] md:text-[140px] leading-none text-white mb-2 tracking-tighter drop-shadow-2xl">1824</h2>
+              <p className="font-label-caps text-sm md:text-xl text-white font-bold uppercase tracking-widest drop-shadow-md bg-black/80 inline-block px-4 py-2 border-l-4 border-primary">
+                XIỀNG XÍCH VẬT LÝ
+              </p>
+            </div>
+          </div>
+
+          {/* 2024 - Right Side */}
+          <div className="relative w-full md:w-1/2 h-1/2 md:h-full group overflow-hidden bg-[#050505]">
+            {/* Massive Background Video */}
+            <motion.div
+              initial={{ scale: 1.1 }}
+              whileInView={{ scale: 1 }}
+              transition={{ duration: 2 }}
+              className="absolute inset-0 w-full h-full opacity-60 group-hover:opacity-100 transition-opacity duration-700 mix-blend-screen overflow-hidden"
+            >
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+                src="/Working.mp4"
+              />
+            </motion.div>
+            <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-[#050505]/30 opacity-90 pointer-events-none"></div>
+
+            {/* Minimal Text */}
+            <div className="absolute bottom-8 right-8 md:bottom-16 md:right-16 z-20 text-right pointer-events-none">
+              <h2 className="font-headline-xl text-[80px] md:text-[140px] leading-none text-white mb-2 tracking-tighter drop-shadow-2xl">2024</h2>
+              <p className="font-label-caps text-sm md:text-xl text-white font-bold uppercase tracking-widest drop-shadow-md bg-black/80 inline-block px-4 py-2 border-r-4 border-surface-variant">
+                XIỀNG XÍCH THUẬT TOÁN
+              </p>
+            </div>
+
+            {/* Floating HUD Elements */}
+            <div className="absolute inset-0 z-15 pointer-events-none font-data-mono text-xs md:text-sm">
+              <motion.div
+                animate={{ y: [0, -10, 0], opacity: [0.9, 1, 0.9] }}
+                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                className="absolute top-[15%] right-[10%] bg-error/30 text-white font-bold border border-error/50 px-3 py-1 rounded-sm backdrop-blur-sm shadow-[0_0_20px_rgba(186,26,26,0.5)]"
+              >
+                [RATING CRITICAL: 4.87] 🔻
+              </motion.div>
+              <motion.div
+                animate={{ y: [0, 15, 0], opacity: [0.8, 1, 0.8] }}
+                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+                className="absolute bottom-[30%] left-[10%] bg-primary/30 text-white font-bold border border-primary/50 px-3 py-1 rounded-sm backdrop-blur-sm shadow-[0_0_20px_rgba(108,27,24,0.5)]"
+              >
+                [IDLE WARNING: &gt; 2 mins]
+              </motion.div>
+            </div>
+          </div>
+
         </div>
       </section>
       {/* --- SECTION 6: CINEMATIC FINALE & GOALS --- */}
@@ -444,7 +466,7 @@ export default function LandingPage() {
         <div className="relative z-10 w-full flex flex-col items-center">
           {/* Sub-section 1: Detailed Manifesto */}
           <section className="scroll-section min-h-screen flex items-center justify-center px-6 py-24">
-            <motion.p 
+            <motion.p
               {...fadeIn}
               className="font-body-md text-2xl md:text-4xl lg:text-5xl max-w-5xl text-center leading-relaxed text-surface-variant drop-shadow-lg opacity-90"
             >
@@ -454,7 +476,7 @@ export default function LandingPage() {
 
           {/* Sub-section 2: Minimalist Goals */}
           <section className="scroll-section min-h-screen flex flex-col items-center justify-center px-6 py-24">
-            <motion.h2 
+            <motion.h2
               {...fadeIn}
               className="font-label-caps text-primary tracking-[0.3em] mb-16 md:mb-32 text-sm md:text-base opacity-70"
             >
@@ -479,13 +501,13 @@ export default function LandingPage() {
 
           {/* Sub-section 3: Cinematic Finale & CTA */}
           <section className="scroll-section min-h-screen flex flex-col items-center justify-center px-6 py-24 gap-16 md:gap-32">
-            <motion.h1 
+            <motion.h1
               {...scaleUp}
               className="font-headline-xl text-[10vw] md:text-[8vw] leading-[1.1] text-center uppercase text-primary drop-shadow-2xl font-extrabold max-w-7xl mix-blend-screen tracking-tighter"
             >
-              Đấu tranh giai cấp<br/>trong kỷ nguyên số.
+              Đấu tranh giai cấp<br />trong kỷ nguyên số.
             </motion.h1>
-            <motion.button 
+            <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="group bg-primary text-on-primary font-headline-lg text-2xl md:text-4xl lg:text-5xl uppercase px-12 py-8 md:px-20 md:py-10 hover:bg-surface-variant hover:text-primary transition-all duration-500 flex items-center gap-8 shadow-[0_0_40px_rgba(108,27,24,0.5)] hover:shadow-[0_0_60px_rgba(251,222,182,0.6)]"
@@ -504,6 +526,15 @@ export default function LandingPage() {
           COMMON PROPERTY OF THE PROLETARIAT © MCMXVII - MMXXIV
         </p>
       </footer>
+      {/* Menu nút bấm tổng hợp (nằm dưới BookCover, chỉ hiện khi bìa sách mở) */}
+      <div className="fixed bottom-8 left-8 z-40 flex flex-col gap-4 items-start pointer-events-none">
+        <div className="pointer-events-auto">
+          <AudioPlayer />
+        </div>
+        <div className="pointer-events-auto">
+          <AutoScrollButton />
+        </div>
+      </div>
     </main>
   );
 }
