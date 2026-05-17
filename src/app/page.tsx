@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "framer-motion";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState } from "react";
 import { useLenis } from "lenis/react";
 
 import AutoScrollButton from "@/components/AutoScrollButton";
