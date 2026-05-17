@@ -3,31 +3,34 @@
 import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 
-export default function AudioPlayer() {
+interface AudioPlayerProps {
+  activeYear?: string;
+}
+
+export default function AudioPlayer({ activeYear = "1848" }: AudioPlayerProps) {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [currentSrc, setCurrentSrc] = useState("/audio/time.mp3");
 
+  // Determine target audio source based on active scroll section
+  const targetSrc = activeYear === "1848" ? "/audio/time.mp3" : "/audio/Background.mp3";
+
+  // Initial autoplay setup
   useEffect(() => {
-    // Cố gắng phát nhạc ngay lập tức khi trang vừa tải
     if (audioRef.current) {
       audioRef.current.play().then(() => {
         setIsPlaying(true);
       }).catch(() => {
-        // Trình duyệt chặn autoplay, chờ tương tác
+        // Autoplay blocked, waiting for user interaction
       });
     }
 
-    // Dự phòng: Phát nhạc khi người dùng tương tác lần đầu nếu chưa phát
     const handleInteraction = () => {
       if (audioRef.current && audioRef.current.paused) {
         audioRef.current.play().then(() => {
           setIsPlaying(true);
-        }).catch(() => {
-          // Trình duyệt chặn autoplay nếu tương tác chưa đủ mạnh
-        });
+        }).catch(() => {});
       }
-      
-      // Xóa sự kiện sau khi đã tương tác
       window.removeEventListener("click", handleInteraction);
       window.removeEventListener("keydown", handleInteraction);
     };
@@ -41,13 +44,54 @@ export default function AudioPlayer() {
     };
   }, []);
 
+  // Cinematic audio crossfader when active source changes
+  useEffect(() => {
+    if (targetSrc !== currentSrc) {
+      const audio = audioRef.current;
+      if (audio && isPlaying) {
+        // Fade out current track
+        let vol = audio.volume;
+        const fadeOutInterval = setInterval(() => {
+          vol = Math.max(vol - 0.05, 0);
+          audio.volume = vol;
+          if (vol <= 0) {
+            clearInterval(fadeOutInterval);
+            
+            // Switch source safely
+            audio.src = targetSrc;
+            audio.load();
+            setCurrentSrc(targetSrc);
+
+            // Play and fade in new track
+            audio.play().then(() => {
+              let newVol = 0;
+              const fadeInInterval = setInterval(() => {
+                newVol = Math.min(newVol + 0.05, 0.3);
+                audio.volume = newVol;
+                if (newVol >= 0.3) clearInterval(fadeInInterval);
+              }, 40);
+            }).catch(() => {});
+          }
+        }, 40);
+      } else {
+        // If not playing, just switch the source instantly
+        setCurrentSrc(targetSrc);
+        if (audio) {
+          audio.src = targetSrc;
+          audio.load();
+        }
+      }
+    }
+  }, [targetSrc, currentSrc, isPlaying]);
+
+
   const togglePlay = (e: React.MouseEvent) => {
-    e.stopPropagation(); // Ngăn chặn sự kiện click lan ra ngoài gây trigger handleInteraction
+    e.stopPropagation();
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.pause();
       } else {
-        audioRef.current.play();
+        audioRef.current.play().catch(() => {});
       }
       setIsPlaying(!isPlaying);
     }
@@ -55,7 +99,16 @@ export default function AudioPlayer() {
 
   return (
     <>
-      <audio ref={audioRef} src="/Background.mp3" loop autoPlay onCanPlay={(e) => { e.currentTarget.volume = 0.3; }} />
+      <audio 
+        ref={audioRef} 
+        src={currentSrc} 
+        loop 
+        autoPlay 
+        onCanPlay={(e) => { 
+          // Keep target volume at 0.3 when successfully loaded
+          e.currentTarget.volume = 0.3; 
+        }} 
+      />
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}

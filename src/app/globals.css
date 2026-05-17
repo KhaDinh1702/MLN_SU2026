@@ -60,20 +60,20 @@
 
   /* Fonts */
   --font-data-mono: var(--font-jetbrains-mono);
-  --font-body-md: var(--font-ibm-plex-serif);
-  --font-body-sm: var(--font-ibm-plex-serif);
-  --font-headline-lg: var(--font-domine);
-  --font-headline-lg-mobile: var(--font-domine);
-  --font-headline-xl: var(--font-domine);
+  --font-body-md: var(--font-eb-garamond);
+  --font-body-sm: var(--font-eb-garamond);
+  --font-headline-lg: var(--font-eb-garamond);
+  --font-headline-lg-mobile: var(--font-eb-garamond);
+  --font-headline-xl: var(--font-eb-garamond);
   --font-label-caps: var(--font-jetbrains-mono);
 
   /* Font Sizes & Weights */
   --font-size-data-mono: 14px;
-  --font-size-body-md: 16px;
-  --font-size-body-sm: 14px;
-  --font-size-headline-lg: 32px;
+  --font-size-body-md: 18px;
+  --font-size-body-sm: 15px;
+  --font-size-headline-lg: 34px;
   --font-size-headline-lg-mobile: 28px;
-  --font-size-headline-xl: 48px;
+  --font-size-headline-xl: 52px;
   --font-size-label-caps: 12px;
 
   --font-line-height-headline-xl: 1.15;

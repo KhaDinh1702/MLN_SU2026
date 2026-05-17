@@ -1,12 +1,19 @@
 import SmoothScroll from "@/components/SmoothScroll";
 import type { Metadata } from "next";
-import { Domine, IBM_Plex_Serif, JetBrains_Mono } from "next/font/google";
+import { EB_Garamond, Cinzel, IBM_Plex_Serif, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const domine = Domine({
-  variable: "--font-domine",
+const ebGaramond = EB_Garamond({
+  variable: "--font-eb-garamond",
+  subsets: ["latin", "vietnamese"],
+  weight: ["400", "500", "600", "700", "800"],
+  style: ["normal", "italic"],
+});
+
+const cinzel = Cinzel({
+  variable: "--font-cinzel",
   subsets: ["latin"],
-  weight: ["400", "700"],
+  weight: ["400", "700", "800", "900"],
 });
 
 const ibmPlexSerif = IBM_Plex_Serif({
@@ -35,7 +42,7 @@ export default function RootLayout({
   return (
     <html
       lang="vi"
-      className={`${domine.variable} ${ibmPlexSerif.variable} ${jetbrainsMono.variable} h-full antialiased`}
+      className={`${ebGaramond.variable} ${cinzel.variable} ${ibmPlexSerif.variable} ${jetbrainsMono.variable} h-full antialiased`}
       suppressHydrationWarning
     >
       <head>
