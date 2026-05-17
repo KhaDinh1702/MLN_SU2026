@@ -76,7 +76,6 @@ export function HorizontalChapter({
       >
         {/* Sticky viewport — stays fixed while user scrolls through the spacer */}
         <div className={`sticky top-0 h-screen overflow-hidden ${bgClassName}`}>
-          {/* Animated horizontal track */}
           <Scrollytelling.Animation
             tween={{
               target: `#${trackId}`,
@@ -84,7 +83,7 @@ export function HorizontalChapter({
               to: { xPercent: -((count - 1) / count * 100) },
               start: 0,
               end: 100,
-            }}
+            } as any}
           />
           <div
             id={trackId}
