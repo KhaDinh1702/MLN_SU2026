@@ -23,7 +23,7 @@ export default function BookCover() {
 
   useEffect(() => {
     // Khởi tạo âm thanh Alert
-    audioRef.current = new Audio("/Alert.mp3");
+    audioRef.current = new Audio("/audio/Alert.mp3");
   }, []);
 
   // Lắng nghe sự kiện cuộn để phát âm thanh duy nhất 1 lần khi bắt đầu tách sách
@@ -83,11 +83,8 @@ export default function BookCover() {
           y: topY,
           backgroundColor: "#000000",
         }}
-        className="w-full h-1/2 drop-shadow-[0_20px_30px_rgba(0,0,0,0.8)] border-b border-white/10 z-20 relative"
-      >
-        {/* Lớp filter làm tối nhẹ */}
-        <div className="absolute inset-0 bg-black/40" />
-      </motion.div>
+        className="w-full h-1/2 drop-shadow-[0_20px_30px_rgba(0,0,0,0.8)] border-b border-white/10 z-20 relative overflow-hidden bg-black"
+      />
 
       {/* Nửa Dưới */}
       <motion.div
@@ -95,10 +92,8 @@ export default function BookCover() {
           y: bottomY,
           backgroundColor: "#000000",
         }}
-        className="w-full h-1/2 drop-shadow-[0_-20px_30px_rgba(0,0,0,0.8)] border-t border-white/10 z-10 relative"
-      >
-        <div className="absolute inset-0 bg-black/40" />
-      </motion.div>
+        className="w-full h-1/2 drop-shadow-[0_-20px_30px_rgba(0,0,0,0.8)] border-t border-white/10 z-10 relative overflow-hidden bg-black"
+      />
     </motion.div>
   );
 }
