@@ -80,7 +80,7 @@ export default function DigitalChapter() {
             transition={{ duration: 0.8 }}
             className="flex flex-col gap-6"
           >
-            <p className="font-data-mono text-data-mono text-primary uppercase tracking-[0.3em] text-xs">
+            <p className="font-data-mono text-data-mono text-amber-500 uppercase tracking-[0.3em] text-xs">
               CMCN 3.0 — Cuối thế kỷ XX
             </p>
             <h1 className="font-headline-xl text-4xl md:text-6xl lg:text-7xl uppercase leading-[0.95] tracking-tighter text-surface-container-lowest drop-shadow-[0_0_20px_rgba(255,255,255,0.2)]">
