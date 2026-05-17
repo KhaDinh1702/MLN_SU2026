@@ -13,7 +13,7 @@ export default function AutoScrollButton() {
     const scrollStep = () => {
       // Trình duyệt thường bỏ qua giá trị scroll lẻ (ví dụ 0.25px). 
       // Dùng accumulator để cộng dồn đến khi >= 1px thì mới thực hiện cuộn.
-      scrollAccumulator.current += 0.25;
+      scrollAccumulator.current += 0.35;
 
       if (scrollAccumulator.current >= 1) {
         const pixels = Math.floor(scrollAccumulator.current);

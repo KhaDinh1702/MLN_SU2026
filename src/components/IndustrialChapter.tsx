@@ -84,7 +84,7 @@ export default function IndustrialChapter() {
                 <div className="absolute inset-0 bg-on-surface/60" />
               </div>
               <div className="relative z-10 flex flex-col items-center gap-6">
-                <p className="font-data-mono text-xs uppercase tracking-[0.4em] text-primary">
+                <p className="font-data-mono text-xs uppercase tracking-[0.4em] text-amber-500">
                   CMCN 1.0 — Thế kỷ XIX
                 </p>
                 <h2 className="font-headline-xl text-5xl md:text-8xl uppercase text-surface tracking-tighter leading-none">
