@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import SmoothScroll from "@/components/SmoothScroll";
 import type { Metadata } from "next";
 import { EB_Garamond, Cinzel, IBM_Plex_Serif, JetBrains_Mono } from "next/font/google";

@@ -1,165 +1,11 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { motion, useScroll, useTransform, useMotionValueEvent } from "framer-motion";
-import { useEffect, useRef, useId } from "react";
+import { useEffect, useRef } from "react";
 import SpringInteractiveCard from "./SpringInteractiveCard";
 
-const GearIcon = ({ className, style }: { className?: string; style?: any }) => {
-  const id = useId().replace(/:/g, "");
-  const gradientId = `metal-grad-${id}`;
-  const brassId = `brass-grad-${id}`;
-  const shadowId = `gear-shadow-${id}`;
 
-  return (
-    <motion.svg
-      className={className}
-      style={style}
-      viewBox="0 0 100 100"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <defs>
-        {/* Deep drop shadow for 3D realism */}
-        <filter id={shadowId} x="-20%" y="-20%" width="140%" height="140%">
-          <feDropShadow dx="2" dy="3" stdDeviation="3" floodColor="#000" floodOpacity="0.85" />
-        </filter>
-
-        {/* Dynamic metallic rustic copper/bronze gradient */}
-        <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stopColor="#2c0f05" />
-          <stop offset="15%" stopColor="#5c1d06" />
-          <stop offset="35%" stopColor="#b45309" /> {/* Brass reflection */}
-          <stop offset="50%" stopColor="#ea580c" /> {/* Copper sheen */}
-          <stop offset="65%" stopColor="#7c2d12" /> {/* Aged iron */}
-          <stop offset="85%" stopColor="#3f1204" />
-          <stop offset="100%" stopColor="#1a0600" />
-        </linearGradient>
-
-        {/* Polished brass/gold gradient for the center hub */}
-        <radialGradient id={brassId} cx="40%" cy="40%" r="60%">
-          <stop offset="0%" stopColor="#fef08a" /> {/* Highlight */}
-          <stop offset="40%" stopColor="#d97706" /> {/* Gold */}
-          <stop offset="80%" stopColor="#92400e" /> {/* Bronze */}
-          <stop offset="100%" stopColor="#451a03" />
-        </radialGradient>
-      </defs>
-
-      {/* Main Gear Group with Filter */}
-      <g filter={`url(#${shadowId})`}>
-        {/* 12 Outer Teeth */}
-        {[...Array(12)].map((_, i) => {
-          const angle = (i * 360) / 12;
-          return (
-            <g key={i} transform={`rotate(${angle} 50 50)`}>
-              <path
-                d="M43 5 L57 5 L54 17 L46 17 Z"
-                fill={`url(#${gradientId})`}
-                stroke="#000000"
-                strokeWidth="1.2"
-                strokeLinejoin="round"
-              />
-            </g>
-          );
-        })}
-
-        {/* Outer gear ring */}
-        <circle
-          cx="50"
-          cy="50"
-          r="36"
-          fill={`url(#${gradientId})`}
-          stroke="#000000"
-          strokeWidth="2"
-        />
-
-        {/* Inner concentric accent groove on the outer ring */}
-        <circle
-          cx="50"
-          cy="50"
-          r="31"
-          fill="none"
-          stroke="#1a0600"
-          strokeWidth="1"
-          opacity="0.6"
-        />
-
-        {/* 4 Beautifully tapered curved industrial spokes */}
-        {[...Array(4)].map((_, i) => (
-          <g key={i} transform={`rotate(${i * 90} 50 50)`}>
-            <path
-              d="M46 16 C38 27 38 39 46 50 L54 50 C62 39 62 27 54 16 Z"
-              fill={`url(#${gradientId})`}
-              stroke="#000000"
-              strokeWidth="1.2"
-            />
-          </g>
-        ))}
-
-        {/* Center Hub Outer Ring */}
-        <circle
-          cx="50"
-          cy="50"
-          r="16"
-          fill={`url(#${brassId})`}
-          stroke="#000000"
-          strokeWidth="1.8"
-        />
-
-        {/* Beveled edge groove on the Hub */}
-        <circle
-          cx="50"
-          cy="50"
-          r="13"
-          fill="none"
-          stroke="#78350f"
-          strokeWidth="0.8"
-          opacity="0.8"
-        />
-
-        {/* 6 Rivets/bolts on the brass hub */}
-        {[...Array(6)].map((_, i) => {
-          const angle = (i * 360) / 6;
-          const rad = (angle * Math.PI) / 180;
-          const cx = 50 + 9.5 * Math.cos(rad);
-          const cy = 50 + 9.5 * Math.sin(rad);
-          return (
-            <circle
-              key={i}
-              cx={cx}
-              cy={cy}
-              r="1.2"
-              fill="#fbbf24"
-              stroke="#451a03"
-              strokeWidth="0.5"
-            />
-          );
-        })}
-
-        {/* Center axle hole (deep cavity) */}
-        <circle
-          cx="50"
-          cy="50"
-          r="6.5"
-          fill="#111111"
-          stroke="#000000"
-          strokeWidth="1.2"
-        />
-
-        {/* Keyway slot (machined notch) */}
-        <rect
-          x="48"
-          y="40"
-          width="4"
-          height="6"
-          fill="#111111"
-          stroke="#000000"
-          strokeWidth="0"
-        />
-        {/* Draw a small black cover line to clear axle stroke at the notch */}
-        <line x1="48" y1="43.5" x2="52" y2="43.5" stroke="#111111" strokeWidth="1" />
-      </g>
-    </motion.svg>
-  );
-};
 
 export const fadeIn = {
   initial: { opacity: 0, y: 20 },
@@ -178,10 +24,7 @@ export default function HeroSection() {
     offset: ["start end", "end start"],
   });
 
-  const rotateBig = useTransform(scrollYProgress, [0, 1], [0, 360]);
-  const rotateSmall = useTransform(scrollYProgress, [0, 1], [0, 540]);
-  const rotateTiny = useTransform(scrollYProgress, [0, 1], [0, -864]);
-  const rotateReverse = useTransform(scrollYProgress, [0, 1], [0, -400]);
+
 
   const curtainLeftX = useTransform(scrollYProgress, [0.15, 0.65], ["0%", "-100%"]);
   const curtainRightX = useTransform(scrollYProgress, [0.15, 0.65], ["0%", "100%"]);
