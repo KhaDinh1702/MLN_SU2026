@@ -13,8 +13,10 @@ import IndustrialChapter from "@/components/IndustrialChapter";
 import DigitalChapter from "@/components/DigitalChapter";
 import StruggleSection from "@/components/StruggleSection";
 import FinaleSection from "@/components/FinaleSection";
+import { useRouter } from "next/navigation";
 
 export default function LandingPage() {
+  const router = useRouter();
   const [activeTimeline, setActiveTimeline] = useState({
     year: "1848",
     era: "Communist Manifesto",
@@ -112,7 +114,7 @@ export default function LandingPage() {
       <IndustrialChapter />
       <DigitalChapter />
       <StruggleSection />
-      <FinaleSection />
+      <FinaleSection onStartGame={() => router.push("/game")} />
 
       {/* Floating Menu (Fixed bottom left, only shows when book is opened) */}
       <div className="fixed bottom-8 left-8 z-40 flex flex-col gap-4 items-start pointer-events-none">
