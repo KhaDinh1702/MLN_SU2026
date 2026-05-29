@@ -11,14 +11,10 @@
             "id": "ac10254520757abe",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "TAI_LIEU_TRIET_HOC.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "TAI_LIEU_TRIET_HOC"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
             }
           }
         ]
@@ -185,6 +181,14 @@
   },
   "active": "ac10254520757abe",
   "lastOpenFiles": [
+    "node_modules/eslint-plugin-import/README.md",
+    "CAU_CHUYEN_GIAI_CAP_HIEN_DAI.md",
+    "CLAUDE.md",
+    "docs/rules/no-this-in-sfc.md",
+    "docs/rules",
+    "docs",
+    "README.md",
+    "TAI_LIEU_TRIET_HOC.md",
     "src/components/PhilosophicalTarot.tsx",
     "src/components/DigitalLaborSimulator.tsx",
     "src/utils/exploitationCalculator.test.ts",
@@ -195,21 +199,16 @@
     "public/images/Cover.mp4",
     "public/images/PinLoad___1778997052989.mp4",
     "public/audio/digital.mp3",
-    "public/audio/Keyboard, typing sound effect.mp3",
     "public/images/digital.gif",
     "public/images/03ce5e96d775310e469c281781ffcef3.gif",
-    "public/audio/worker.mp3",
-    "public/audio/Industrial  Machines sound sfx effect 🎧🛠️ Techie  industrial edit theme – factory vibe.mp3",
     "public/images/worker.gif",
     "public/images/machinechain.gif",
     "public/images/algorithmchain.png",
     "public/worker.gif",
     "public/f94c9b48fedb303049f946e034f6ec76.gif",
-    "CAU_CHUYEN_GIAI_CAP_HIEN_DAI.md",
     "public/algorithmchain.png",
     "node_modules/undici/docs/api/Client.md",
     "node_modules/is-array-buffer/README.md",
-    "node_modules/next/dist/compiled/regenerator-runtime/README.md",
-    "TAI_LIEU_TRIET_HOC.md"
+    "node_modules/next/dist/compiled/regenerator-runtime/README.md"
   ]
 }

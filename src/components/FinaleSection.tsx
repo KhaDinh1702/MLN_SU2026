@@ -38,22 +38,18 @@ export default function FinaleSection({ onStartGame }: FinaleSectionProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl text-left">
             {[
               {
-                icon: "power_settings_new",
                 label: "Đàm phán & Thương lượng số",
                 desc: "Các hình thức phản kháng ôn hòa như ngừng kết nối, dừng đăng tải nội dung để yêu cầu chính sách chiết khấu hợp lý.",
               },
               {
-                icon: "visibility",
                 label: "Minh bạch thuật toán",
                 desc: "Thúc đẩy các quy định pháp lý buộc nền tảng công khai cơ chế đề xuất hiển thị và phân chia doanh thu.",
               },
               {
-                icon: "shield",
                 label: "Bảo vệ dữ liệu & Giá trị số",
                 desc: "Khẳng định quyền kiểm soát thông tin cá nhân và đảm bảo giá trị thặng dư từ dữ liệu được phân chia công bằng.",
               },
               {
-                icon: "groups",
                 label: "Hiệp hội lao động số",
                 desc: "Hình thành các mạng lưới, nghiệp đoàn và cộng đồng để hỗ trợ pháp lý và bảo vệ quyền lợi của freelancer.",
               },
@@ -64,16 +60,13 @@ export default function FinaleSection({ onStartGame }: FinaleSectionProps) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.15, duration: 0.6 }}
-                className="flex gap-5 p-6 border border-surface/10 bg-surface/5 backdrop-blur-sm"
+                className="flex gap-5 p-6 border border-surface/10 bg-surface/5 backdrop-blur-sm group hover:border-primary/30 transition-all duration-300"
               >
-                <span
-                  className="material-symbols-outlined text-primary text-3xl shrink-0 mt-1"
-                  style={{ fontVariationSettings: "'FILL' 1" }}
-                >
-                  {item.icon}
-                </span>
+                <div className="font-data-mono text-xl font-bold text-primary shrink-0 mt-0.5 select-none">
+                  {`0${i + 1}`}
+                </div>
                 <div className="flex flex-col gap-2">
-                  <h3 className="font-label-caps text-surface uppercase tracking-wider text-sm font-bold">
+                  <h3 className="font-label-caps text-surface uppercase tracking-wider text-sm font-bold group-hover:text-primary transition-colors duration-300">
                     {item.label}
                   </h3>
                   <p className="font-body-md text-surface-variant text-base leading-relaxed">
@@ -120,22 +113,18 @@ export default function FinaleSection({ onStartGame }: FinaleSectionProps) {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full">
               {[
                 {
-                  icon: "analytics",
                   title: "Quan hệ giai cấp chưa mất đi",
                   desc: "Dù xã hội hiện đại hơn, bất bình đẳng vẫn tồn tại và sự bóc lột chỉ thay đổi hình thức, biểu hiện tinh vi hơn thông qua dữ liệu và thuật toán.",
                 },
                 {
-                  icon: "devices",
                   title: "Hiểu đúng về 'tự do công nghệ'",
                   desc: "Người lao động số tuy sở hữu một phần công cụ lao động và có nhiều cơ hội hơn, nhưng thực chất vẫn phụ thuộc sâu sắc vào nền tảng trực tuyến.",
                 },
                 {
-                  icon: "gavel",
                   title: "Vai trò quản lý của Nhà nước",
                   desc: "Cần thiết phải hoàn thiện luật lao động số, quản lý chặt chẽ các nền tảng xuyên quốc gia và bảo vệ dữ liệu cá nhân của người lao động.",
                 },
                 {
-                  icon: "school",
                   title: "Nâng cao năng lực người lao động",
                   desc: "Để giảm phụ thuộc, lao động số cần liên tục nâng cao kỹ năng, làm chủ công nghệ, xây dựng thương hiệu riêng và đa dạng hóa nguồn thu nhập.",
                 },
@@ -148,9 +137,9 @@ export default function FinaleSection({ onStartGame }: FinaleSectionProps) {
                   transition={{ delay: idx * 0.15, duration: 0.6 }}
                   className="flex gap-6 p-8 border border-surface/10 bg-surface/5 backdrop-blur-md rounded-sm hover:border-primary/40 transition-all duration-500 group"
                 >
-                  <span className="material-symbols-outlined text-primary text-4xl shrink-0 mt-1 transition-transform duration-500 group-hover:scale-110">
-                    {lesson.icon}
-                  </span>
+                  <div className="font-data-mono text-2xl font-black text-primary shrink-0 mt-0.5 transition-all duration-500 group-hover:translate-x-1 select-none">
+                    {`0${idx + 1}`}
+                  </div>
                   <div className="flex flex-col gap-3">
                     <h3 className="font-headline-lg text-xl uppercase tracking-wider text-surface group-hover:text-primary transition-colors duration-500">
                       {lesson.title}
@@ -206,9 +195,15 @@ export default function FinaleSection({ onStartGame }: FinaleSectionProps) {
               className="group bg-primary text-on-primary font-headline-lg text-2xl md:text-4xl lg:text-5xl uppercase px-12 py-8 md:px-20 md:py-10 hover:bg-surface-variant hover:text-primary transition-all duration-500 flex items-center gap-8 shadow-[0_0_40px_rgba(108,27,24,0.5)] hover:shadow-[0_0_60px_rgba(251,222,182,0.6)] cursor-pointer"
             >
               BẮT ĐẦU NGAY
-              <span className="material-symbols-outlined text-4xl md:text-6xl group-hover:translate-x-4 transition-transform duration-500">
-                arrow_forward
-              </span>
+              <svg 
+                className="w-8 h-8 md:w-12 md:h-12 text-current group-hover:translate-x-4 transition-transform duration-500 shrink-0" 
+                fill="none" 
+                stroke="currentColor" 
+                strokeWidth="3" 
+                viewBox="0 0 24 24"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+              </svg>
             </motion.button>
           </section>
         </div>

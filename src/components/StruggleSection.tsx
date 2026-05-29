@@ -56,9 +56,9 @@ export default function StruggleSection() {
           Sự bóc lột thay đổi hình thức. Không thay đổi bản chất.
         </motion.p>
         <div className="absolute bottom-10 animate-bounce">
-          <span className="material-symbols-outlined text-4xl text-primary opacity-50">
-            keyboard_arrow_down
-          </span>
+          <svg className="w-8 h-8 text-primary opacity-50" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
         </div>
       </section>
 
@@ -136,23 +136,6 @@ export default function StruggleSection() {
               </p>
             </div>
 
-            {/* Floating HUD Elements */}
-            <div className="absolute inset-0 z-15 pointer-events-none font-data-mono text-xs md:text-sm">
-              <motion.div
-                animate={{ y: [0, -10, 0], opacity: [0.9, 1, 0.9] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute top-[15%] right-[10%] bg-error/30 text-white font-bold border border-error/50 px-3 py-1 rounded-sm backdrop-blur-sm shadow-[0_0_20px_rgba(186,26,26,0.5)]"
-              >
-                [RATING CRITICAL: 4.87] 🔻
-              </motion.div>
-              <motion.div
-                animate={{ y: [0, 15, 0], opacity: [0.8, 1, 0.8] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                className="absolute bottom-[30%] left-[10%] bg-primary/30 text-white font-bold border border-primary/50 px-3 py-1 rounded-sm backdrop-blur-sm shadow-[0_0_20px_rgba(108,27,24,0.5)]"
-              >
-                [IDLE WARNING: &gt; 2 mins]
-              </motion.div>
-            </div>
           </div>
         </div>
       </section>
@@ -161,14 +144,18 @@ export default function StruggleSection() {
 
       {/* Scene: Tư liệu sản xuất là gì */}
       <section className="scroll-section w-screen min-h-screen relative bg-on-surface overflow-hidden flex items-center justify-center">
-        <div
-          className="absolute inset-0 opacity-20 bg-cover bg-center bg-fixed grayscale"
-          style={{
-            backgroundImage:
-              "url('https://lh3.googleusercontent.com/aida-public/AB6AXuCmsYu6vs8NLUgLU9bHY9jZseowZtoL3hM1Flm7JcQJRCmuiqIBiZ8-HjkSum9t-_BK0Mf0cbCSjc3HbddYmYLwt-urzze0lKlCU-Woznj1hyFx_w-t5E1ZRPBIw_MW4kwQU8Nn0ejqZecLw0R2QGAWdEwJk7lsRnF75Pu0VYzPvYwwkpt8eghVeuPoBAt-pv6Bf4kmmLll4ycRIPZd7DV-h3ABb1puoVLlAklEU1sEFnCXXBFjqHoobMXKgaHZ8FvauO1GpQ9r0ZQh')",
-          }}
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-on-surface/90 via-on-surface/60 to-on-surface/90" />
+        {/* Background Video */}
+        <div className="absolute inset-0 z-0 opacity-50">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover grayscale brightness-90"
+            src="/images/eyes.mp4"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/20 to-black/80 z-5" />
         <motion.div {...fadeIn} className="relative z-10 w-full max-w-5xl px-8 py-20 flex flex-col items-center gap-16">
           <h2 className="font-headline-xl text-[6vw] md:text-[5rem] uppercase text-surface tracking-tighter text-center leading-[1.1]">
             Kẻ nào kiểm soát
@@ -233,9 +220,23 @@ export default function StruggleSection() {
             /* Page 1: 01 / THUẬT TOÁN */
             <section
               key="e0"
-              className="w-full h-full flex flex-col justify-center px-8 md:px-24 relative"
+              className="w-full h-full flex flex-col justify-center px-8 md:px-24 relative bg-black overflow-hidden"
             >
-              <div className="absolute inset-0 scanlines opacity-10 pointer-events-none z-0" />
+              {/* Background Video */}
+              <div className="absolute inset-0 z-0 opacity-60">
+                <video
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover grayscale brightness-90"
+                  src="/images/algorithm.mp4"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/20 to-transparent"></div>
+              </div>
+
+              <div className="absolute inset-0 scanlines opacity-15 pointer-events-none z-10" />
+              
               <div className="relative z-10 flex flex-col gap-6">
                 <p className="font-data-mono text-xs uppercase tracking-[0.4em] text-error">
                   01 / THUẬT TOÁN
@@ -251,7 +252,7 @@ export default function StruggleSection() {
                   bạn đăng bài liên tục, không ngừng nghỉ, không có ngày nghỉ phép.
                 </p>
               </div>
-              <div className="absolute bottom-12 right-12 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
+              <div className="absolute bottom-12 left-1/2 -translate-x-1/2 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
                 01 / 03
               </div>
             </section>,
@@ -276,7 +277,7 @@ export default function StruggleSection() {
                   tảng. Bạn sáng tạo nội dung. Họ bán quảng cáo tỷ đô. <em>Bạn nhận lại bao nhiêu?</em>
                 </p>
               </div>
-              <div className="absolute bottom-12 right-12 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
+              <div className="absolute bottom-12 left-1/2 -translate-x-1/2 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
                 02 / 03
               </div>
             </section>,
@@ -302,7 +303,7 @@ export default function StruggleSection() {
                   <em>Nền tảng hưởng lợi — bạn gánh rủi ro.</em>
                 </p>
               </div>
-              <div className="absolute bottom-12 right-12 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
+              <div className="absolute bottom-12 left-1/2 -translate-x-1/2 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
                 03 / 03
               </div>
             </section>,

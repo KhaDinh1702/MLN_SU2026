@@ -84,7 +84,7 @@ export default function DigitalChapter() {
             <p className="font-data-mono text-data-mono text-amber-500 uppercase tracking-[0.3em] text-xs">
               CMCN 3.0 — Cuối thế kỷ XX
             </p>
-            <h1 className="font-headline-xl text-4xl md:text-6xl lg:text-7xl uppercase leading-[0.95] tracking-tighter text-surface-container-lowest drop-shadow-[0_0_20px_rgba(255,255,255,0.2)]">
+            <h1 className="font-headline-xl text-4xl md:text-6xl lg:text-7xl uppercase leading-[0.95] tracking-tighter text-surface-container-lowest">
               Kỷ luật<br />
               <span className="text-primary">Kỹ thuật số</span>
             </h1>
@@ -102,7 +102,7 @@ export default function DigitalChapter() {
             whileInView={{ scale: 1, filter: "grayscale(1) contrast(1.5)" }}
             transition={{ duration: 1.5 }}
             alt="Digital control panel"
-            className="w-full h-full object-cover grayscale contrast-[1.5] brightness-[0.7] drop-shadow-[0_0_40px_rgba(255,255,255,0.1)]"
+            className="w-full h-full object-cover grayscale contrast-[1.5] brightness-[0.7]"
             src="/images/digital.gif"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#050505] via-transparent to-transparent pointer-events-none hidden md:block"></div>
@@ -120,7 +120,7 @@ export default function DigitalChapter() {
           <p className="font-data-mono text-xl md:text-3xl mb-8 text-surface-container-lowest/60 uppercase tracking-[0.2em]">
             Thời gian nghỉ
           </p>
-          <h2 className="font-headline-xl text-[20vw] md:text-[15vw] leading-none text-error font-extrabold tracking-tighter drop-shadow-[0_0_30px_rgba(186,26,26,0.6)]">
+          <h2 className="font-headline-xl text-[20vw] md:text-[15vw] leading-none text-error font-extrabold tracking-tighter">
             GIẢM 95%
           </h2>
           <div className="w-px h-24 bg-error/50 mt-12 mb-6"></div>
@@ -136,42 +136,53 @@ export default function DigitalChapter() {
         data-timeline-era="Digital Age"
       >
         <HorizontalChapter
-          bgClassName="bg-on-surface"
+          bgClassName="bg-[#050505]"
           pages={[
             /* Page 1: Chapter Title */
             <section
               key="g0"
-              className="w-full h-full relative flex flex-col items-center justify-center px-8 md:px-24 text-center"
+              className="w-full h-full relative flex flex-col items-center justify-center px-8 md:px-24 text-center bg-black overflow-hidden"
             >
-              <div className="absolute inset-0">
-                <img
-                  alt="Worker in a digital cage"
-                  className="w-full h-full object-cover grayscale opacity-20 contrast-150"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCLjNh8trU9lV98kZb6RX51Z9uBnpPM7wGkgp4hoNjhGRGMS1uC4-MBH1OKFuchfIjpTlAP5Tb8mwuTFmaDD_PRQp8HTMZucZootGMmCFvv8eqwcygd_KraHtzWykMZgFXqojY1w368i95J5HVTm8uxKujk2K1hjyoYzHNDt-Th95ZuizzIUlZMptiz7Ff9yXdBa5JANxzcWUCSHKYSuxwnPrEJESrXx8kLlhhl3rrZ3iDxRGuB28V93-JptBaGRfJIxqOORko2zXno"
-                />
-                <div className="absolute inset-0 bg-on-surface/80" />
-              </div>
-              <div className="relative z-10 flex flex-col items-center gap-6">
-                <p className="font-data-mono text-xs uppercase tracking-[0.4em] text-primary/60">
+              <div className="absolute inset-0 pointer-events-none scanlines opacity-10 z-0" />
+              
+              <div className="relative z-10 flex flex-col items-center gap-5">
+                <p className="font-data-mono text-sm md:text-base uppercase tracking-[0.4em] text-primary font-bold">
                   CMCN 4.0
                 </p>
-                <h1 className="font-headline-xl text-5xl md:text-8xl uppercase text-surface-container-lowest font-extrabold tracking-tighter drop-shadow-2xl leading-none">
+                <h1 className="font-headline-xl text-5xl md:text-7xl uppercase text-surface-container-lowest font-extrabold tracking-tighter leading-none">
                   The Glass
                   <br />
                   <span className="text-primary">Cage</span>
                 </h1>
-                <p className="font-body-md text-lg md:text-2xl text-primary-fixed max-w-2xl italic">
+
+                {/* The Glass Cage Artwork Box - Thu nhỏ để tạo cảm giác nhỏ bé */}
+                <motion.div 
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                  className="w-48 h-48 md:w-64 md:h-64 my-2 overflow-hidden border-2 border-on-surface bg-background/50 shadow-[4px_4px_0px_#271902] relative shrink-0"
+                >
+                  <img
+                    alt="Worker in a digital cage"
+                    className="w-full h-full object-cover contrast-110"
+                    src="/images/glassCage.png"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent pointer-events-none"></div>
+                </motion.div>
+
+                <p className="font-body-md text-base md:text-xl text-primary-fixed max-w-2xl italic leading-relaxed">
                   Sự bóc lột tự nguyện trong kỷ nguyên số.
                 </p>
               </div>
-              <div className="absolute bottom-12 right-12 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
+              <div className="absolute bottom-12 left-1/2 -translate-x-1/2 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
                 01 / 04
               </div>
             </section>,
             /* Page 2: Quyền Lực Thuật Toán */
             <section
               key="g1"
-              className="w-full h-full flex flex-col items-start justify-center px-8 md:px-24 relative bg-on-surface"
+              className="w-full h-full flex flex-col items-start justify-center px-8 md:px-24 relative bg-[#050505]"
             >
               <div className="flex flex-col gap-6">
                 <p className="font-data-mono text-xs uppercase tracking-[0.4em] text-primary">
@@ -189,14 +200,14 @@ export default function DigitalChapter() {
                   Nó vô hình, lạnh lùng và <em>không thể thương lượng</em>.
                 </p>
               </div>
-              <div className="absolute bottom-12 right-12 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
+              <div className="absolute bottom-12 left-1/2 -translate-x-1/2 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
                 02 / 04
               </div>
             </section>,
             /* Page 3: Cô Lập */
             <section
               key="g2"
-              className="w-full h-full flex flex-col items-center justify-center px-8 md:px-24 text-center relative bg-on-surface"
+              className="w-full h-full flex flex-col items-center justify-center px-8 md:px-24 text-center relative bg-[#050505]"
             >
               <div className="flex flex-col items-center gap-6">
                 <p className="font-data-mono text-xs uppercase tracking-[0.4em] text-surface/40">
@@ -210,14 +221,14 @@ export default function DigitalChapter() {
                   mất đi sự kết nối giai cấp thiết yếu.
                 </p>
               </div>
-              <div className="absolute bottom-12 right-12 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
+              <div className="absolute bottom-12 left-1/2 -translate-x-1/2 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
                 03 / 04
               </div>
             </section>,
             /* Page 4: Nguyên Tử Rời Rạc */
             <section
               key="g3"
-              className="w-full h-full flex flex-col items-end justify-center px-8 md:px-24 text-right relative bg-on-surface"
+              className="w-full h-full flex flex-col items-end justify-center px-8 md:px-24 text-right relative bg-[#050505]"
             >
               <div className="flex flex-col items-end gap-6">
                 <p className="font-data-mono text-xs uppercase tracking-[0.4em] text-surface/40">
@@ -231,7 +242,7 @@ export default function DigitalChapter() {
                   dễ dàng bị thao túng.
                 </p>
               </div>
-              <div className="absolute bottom-12 right-12 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
+              <div className="absolute bottom-12 left-1/2 -translate-x-1/2 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
                 04 / 04
               </div>
             </section>,

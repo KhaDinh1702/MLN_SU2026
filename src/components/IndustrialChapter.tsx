@@ -96,7 +96,7 @@ export default function IndustrialChapter() {
                 <p className="font-body-md text-base md:text-xl text-surface/60 max-w-xl leading-relaxed italic">
                   Cuộn xuống để xem những con số kinh hoàng
                 </p>
-                <div className="absolute bottom-12 right-12 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
+                <div className="absolute bottom-12 left-1/2 -translate-x-1/2 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
                   01 / 04
                 </div>
               </div>
@@ -118,7 +118,7 @@ export default function IndustrialChapter() {
                   Trong vòng 50 năm đầu công nghiệp hóa
                 </p>
               </div>
-              <div className="absolute bottom-12 right-12 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
+              <div className="absolute bottom-12 left-1/2 -translate-x-1/2 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
                 02 / 04
               </div>
             </section>,
@@ -132,28 +132,28 @@ export default function IndustrialChapter() {
                 <span className="font-label-caps text-xs text-surface/50 uppercase tracking-[0.4em]">
                   Giờ Làm Việc Trung Bình
                 </span>
-                <p className="font-data-mono text-[18vw] leading-none font-bold text-error drop-shadow-[0_0_40px_rgba(186,26,26,0.6)]">
+                <p className="font-data-mono text-[18vw] leading-none font-bold text-error">
                   14-16h
                 </p>
                 <p className="font-body-md text-lg text-surface/50 italic">
                   Mỗi ngày, 6 ngày một tuần, kể cả trẻ em
                 </p>
               </div>
-              <div className="absolute bottom-12 right-12 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
+              <div className="absolute bottom-12 left-1/2 -translate-x-1/2 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
                 03 / 04
               </div>
             </section>,
             /* Page 4: 17 tuổi */
             <section
               key="w3"
-              className="w-full h-full flex flex-col items-end justify-center px-8 md:px-24 text-right relative"
+              className="w-full h-full flex flex-col items-end justify-center px-8 md:px-24 text-right relative pb-16 md:pb-0"
             >
               <div className="absolute inset-0 bg-on-surface" />
-              <div className="relative z-10 flex flex-col gap-4 items-end">
+              <div className="relative z-10 flex flex-col gap-4 items-end pb-8 md:pb-0">
                 <span className="font-label-caps text-xs text-surface/50 uppercase tracking-[0.4em]">
                   Tuổi Thọ — Manchester 1840
                 </span>
-                <p className="font-data-mono text-[28vw] leading-none font-bold text-surface drop-shadow-2xl">
+                <p className="font-data-mono text-[22vw] md:text-[28vw] leading-none font-bold text-surface drop-shadow-2xl">
                   17
                 </p>
                 <p className="font-body-md text-lg text-surface/50 italic">
@@ -164,7 +164,7 @@ export default function IndustrialChapter() {
                   <span className="text-primary">giai cấp vô sản hiện đại</span>.
                 </p>
               </div>
-              <div className="absolute bottom-12 right-12 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
+              <div className="absolute bottom-12 left-1/2 -translate-x-1/2 font-data-mono text-xs text-surface/30 uppercase tracking-widest">
                 04 / 04
               </div>
             </section>,

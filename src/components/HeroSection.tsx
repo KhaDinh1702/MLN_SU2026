@@ -139,11 +139,8 @@ export default function HeroSection() {
           {...fadeIn}
           className="max-w-4xl mx-auto px-8 text-center relative z-10 flex flex-col items-center"
         >
-          <span
-            className="material-symbols-outlined text-6xl text-primary mb-8 opacity-20"
-            style={{ fontVariationSettings: "'FILL' 1" }}
-          >
-            format_quote
+          <span className="font-serif text-8xl text-primary mb-2 opacity-25 select-none leading-none">
+            “
           </span>
           <p className="font-headline-lg-mobile text-3xl md:font-headline-lg md:text-5xl font-bold mb-12 text-on-background leading-tight">
             Giai cấp vô sản không có gì để mất ngoài những xiềng xích của họ.

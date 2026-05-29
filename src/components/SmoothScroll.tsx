@@ -37,9 +37,10 @@ export default function SmoothScroll({ children }: { children: ReactNode }) {
       root
       autoRaf={false} // Disable Lenis's internal loop so GSAP ticker drives it in perfect phase sync
       options={{
-        lerp: 0.1,
-        duration: 1.5,
+        lerp: 0.07,
+        duration: 1.2,
         smoothWheel: true,
+        wheelMultiplier: 1.0,
       }}
     >
       {children}
