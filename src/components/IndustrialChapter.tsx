@@ -66,7 +66,7 @@ export default function IndustrialChapter() {
       <div
         ref={workerChapterRef}
         data-timeline-year="1800 - 1880"
-        data-timeline-era="Industrial Age"
+        data-timeline-era="Kỷ nguyên Công nghiệp"
       >
         <HorizontalChapter
           bgClassName="bg-on-surface"
@@ -79,7 +79,7 @@ export default function IndustrialChapter() {
               <div className="absolute inset-0">
                 <img
                   src="/images/worker.gif"
-                  alt="Industrial workers"
+                  alt="Công nhân công nghiệp"
                   className="w-full h-full object-cover grayscale opacity-30 contrast-125"
                 />
                 <div className="absolute inset-0 bg-on-surface/60" />

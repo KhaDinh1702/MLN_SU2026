@@ -28,7 +28,7 @@ export default function FinaleSection({ onStartGame }: FinaleSectionProps) {
       <section className="scroll-section text-heavy w-screen min-h-screen flex flex-col items-center justify-center text-center px-6 relative bg-[#1a1101]">
         <motion.div {...fadeIn} className="max-w-5xl mx-auto flex flex-col items-center gap-12">
           <p className="font-data-mono text-data-mono text-surface/40 uppercase tracking-[0.3em]">
-            Digital Class Struggle
+            Đấu tranh Giai cấp Số
           </p>
           <h2 className="font-headline-xl text-5xl md:text-7xl uppercase text-surface tracking-tighter leading-[1.1]">
             Đấu tranh
@@ -90,7 +90,7 @@ export default function FinaleSection({ onStartGame }: FinaleSectionProps) {
         {/* Fixed Background / Texture Layers for Finale */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <img
-            alt="Server racks"
+            alt="Tủ máy chủ"
             className="sticky top-0 w-full h-screen object-cover opacity-20 filter grayscale contrast-150 mix-blend-luminosity"
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuCO_dnxSC64fo0AXDSlsBOd8sm5rlHEAibNKhsHgDQDIjuJYA3fOnLikAnMizLxk_rx1SmnIAv8MLfMbI-9CuvR-z8pGAPFY0aRQghzH_ss-3pTWsgRSzcfoxyZH1p8qBiRibQ82EAOPK8ch5vL-9uSRrqKrBk_MFJPo0jx24q1KGCQXjxkvq5_BO5bZU55-dp8ZonDY_U6jIuiQOKZlnDADiTbQvc_oShJVQ22l3wyRa6fVwzbD8qEa6Sb1OQJyyTPJvDaC2OMyrKd"
           />
@@ -103,7 +103,7 @@ export default function FinaleSection({ onStartGame }: FinaleSectionProps) {
           <section className="scroll-section w-full min-h-screen flex flex-col items-center justify-center px-6 py-24 max-w-6xl mx-auto">
             <motion.div {...fadeIn} className="flex flex-col items-center gap-4 mb-16 text-center">
               <p className="font-data-mono text-xs uppercase tracking-[0.3em] text-primary">
-                Lesson & Practice
+                Bài học & Thực tiễn
               </p>
               <h2 className="font-headline-xl text-4xl md:text-6xl uppercase text-surface tracking-tighter">
                 Ý nghĩa & Bài học thực tiễn
@@ -160,7 +160,7 @@ export default function FinaleSection({ onStartGame }: FinaleSectionProps) {
               className="max-w-4xl mx-auto flex flex-col items-center gap-12 text-center"
             >
               <p className="font-data-mono text-xs uppercase tracking-[0.4em] text-primary">
-                Conclusion • Kết luận
+                Kết luận
               </p>
               <div className="text-[120px] font-headline-xl text-primary leading-[0.1] opacity-40 select-none">
                 &ldquo;

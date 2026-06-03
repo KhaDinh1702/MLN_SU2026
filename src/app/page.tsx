@@ -18,7 +18,7 @@ export default function LandingPage() {
   const router = useRouter();
   const [activeTimeline, setActiveTimeline] = useState({
     year: "1848",
-    era: "Communist Manifesto",
+    era: "Tuyên ngôn Đảng Cộng sản",
   });
   const [showTimeline, setShowTimeline] = useState(false);
   const [isTimelineCollapsed, setIsTimelineCollapsed] = useState(false);
@@ -70,7 +70,7 @@ export default function LandingPage() {
           animate={{ opacity: 1, x: 0 }}
           className="font-headline-lg text-[10px] md:text-[12px] font-extrabold text-surface drop-shadow-md tracking-tighter mix-blend-difference"
         >
-          COLLECTIVE STRUGGLE
+          ĐẤU TRANH TẬP THỂ
         </motion.div>
       </div>
 
@@ -107,7 +107,7 @@ export default function LandingPage() {
                 className="fixed bottom-8 right-8 z-40 w-12 h-12 rounded-full bg-background border-2 border-on-surface flex flex-col items-center justify-center shadow-[3px_3px_0px_#271902] pointer-events-auto hover:bg-primary transition-colors cursor-pointer group"
                 title="Mở rộng dòng thời gian"
               >
-                <span className="text-[8px] uppercase tracking-tighter opacity-50 font-bold group-hover:text-white/80">ERA</span>
+                <span className="text-[8px] uppercase tracking-tighter opacity-50 font-bold group-hover:text-white/80">THỜI KỲ</span>
                 <span className="font-data-mono text-[9px] font-extrabold text-on-background group-hover:text-white leading-none -mt-0.5">
                   {activeTimeline.year.includes(" - ") ? activeTimeline.year.split(" - ")[0] : activeTimeline.year}
                 </span>
@@ -130,7 +130,7 @@ export default function LandingPage() {
                   <span className="text-[10px] leading-none select-none font-bold">✕</span>
                 </button>
                 <span className="text-[10px] uppercase tracking-[0.25em] opacity-40 text-on-background font-data-mono font-bold">
-                  Historical Era
+                  Thời kỳ Lịch sử
                 </span>
                 <AnimatePresence mode="wait">
                   <motion.span

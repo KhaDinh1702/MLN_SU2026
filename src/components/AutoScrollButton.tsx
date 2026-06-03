@@ -134,12 +134,12 @@ export default function AutoScrollButton() {
             className="flex items-center bg-background/95 border border-on-surface backdrop-blur-md px-3 py-1.5 shadow-[2px_2px_0px_#271902] h-10 gap-1.5 overflow-hidden"
           >
             <span className="font-data-mono text-[8px] uppercase tracking-wider text-on-background/50 mr-1 select-none font-bold">
-              SPEED:
+              TỐC ĐỘ:
             </span>
             {[
-              { label: "Slow", val: 0.25 },
-              { label: "Med", val: 0.55 },
-              { label: "Fast", val: 1.15 }
+              { label: "Chậm", val: 0.25 },
+              { label: "Vừa", val: 0.55 },
+              { label: "Nhanh", val: 1.15 }
             ].map((speedOpt) => {
               const isActive = scrollSpeed === speedOpt.val;
               return (

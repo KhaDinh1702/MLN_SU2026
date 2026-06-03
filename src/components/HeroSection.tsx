@@ -91,7 +91,7 @@ export default function HeroSection() {
       <section
         id="section-hero"
         data-timeline-year="1848"
-        data-timeline-era="Communist Manifesto"
+        data-timeline-era="Tuyên ngôn Đảng Cộng sản"
         className="scroll-section w-screen min-h-[140vh] py-24 flex flex-col items-center justify-center relative bg-inverse-surface text-surface overflow-hidden"
       >
         {/* Dark, moody cinematic background setup */}
@@ -104,7 +104,7 @@ export default function HeroSection() {
           <img
             className="w-full h-full object-cover grayscale brightness-[0.4] contrast-[1.25]"
             src="/images/time.gif"
-            alt="Vast chronological cycle of time struggle"
+            alt="Chu kỳ thời gian đấu tranh giai cấp"
           />
         </motion.div>
         <div className="absolute inset-0 bg-gradient-to-b from-inverse-surface/80 via-transparent to-inverse-surface z-0"></div>
@@ -118,7 +118,7 @@ export default function HeroSection() {
         >
           <SpringInteractiveCard className="max-w-2xl w-full mx-auto px-8 py-16 bg-[#000]/70 border border-white/10 backdrop-blur-md rounded-sm shadow-2xl flex flex-col items-center gap-8 group transition-all duration-500 hover:border-primary/50">
             <p className="font-data-mono text-data-mono text-primary uppercase tracking-[0.3em] opacity-80 group-hover:opacity-100 transition-opacity duration-300 text-xs">
-              Manifesto MCMXVII
+              Tuyên ngôn MCMXVII
             </p>
             <h1 className="font-headline-xl text-4xl md:text-6xl text-surface uppercase text-center tracking-tighter leading-none transition-transform duration-500 group-hover:scale-[1.02]">
               CUỘN SÁCH
@@ -187,7 +187,7 @@ export default function HeroSection() {
               <img
                 src="/images/theater_curtain.png"
                 className="absolute left-0 top-0 w-[200%] max-w-none h-full object-cover object-left select-none pointer-events-none"
-                alt="Theater Curtain Left"
+                alt="Màn kịch bên trái"
               />
             </motion.div>
 
@@ -199,7 +199,7 @@ export default function HeroSection() {
               <img
                 src="/images/theater_curtain.png"
                 className="absolute right-0 top-0 w-[200%] max-w-none h-full object-cover object-right select-none pointer-events-none"
-                alt="Theater Curtain Right"
+                alt="Màn kịch bên phải"
               />
             </motion.div>
           </div>

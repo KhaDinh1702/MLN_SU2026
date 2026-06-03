@@ -11,10 +11,14 @@
             "id": "ac10254520757abe",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "Graph view"
+              "type": "markdown",
+              "state": {
+                "file": "KICH_BAN_THUYET_TRINH_WEBSITE.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "KICH_BAN_THUYET_TRINH_WEBSITE"
             }
           }
         ]
@@ -181,6 +185,9 @@
   },
   "active": "ac10254520757abe",
   "lastOpenFiles": [
+    "TAI_LIEU_TRIET_HOC.md",
+    "KICH_BAN_THUYET_TRINH_WEBSITE.md",
+    "node_modules/eslint-module-utils/CHANGELOG.md",
     "node_modules/eslint-plugin-import/README.md",
     "CAU_CHUYEN_GIAI_CAP_HIEN_DAI.md",
     "CLAUDE.md",
@@ -188,7 +195,6 @@
     "docs/rules",
     "docs",
     "README.md",
-    "TAI_LIEU_TRIET_HOC.md",
     "src/components/PhilosophicalTarot.tsx",
     "src/components/DigitalLaborSimulator.tsx",
     "src/utils/exploitationCalculator.test.ts",

@@ -24,7 +24,7 @@ export default function StruggleSection() {
       <section className="scroll-section w-screen min-h-screen flex flex-col items-center justify-center text-center px-6 relative bg-background border-y-8 border-primary">
         <motion.div {...fadeIn} className="max-w-4xl mx-auto flex flex-col items-center gap-8">
           <p className="font-data-mono text-data-mono text-on-surface-variant uppercase tracking-[0.3em]">
-            Assignment — 3.2.1
+            Nhiệm vụ — 3.2.1
           </p>
           <h2 className="font-headline-lg text-4xl md:text-6xl lg:text-7xl font-bold text-on-background uppercase leading-tight tracking-tighter">
             Bạn có thực sự <span className="text-primary italic">tự do</span>
@@ -79,7 +79,7 @@ export default function StruggleSection() {
       {/* Comparison Split Section - Image Centric Sticky Scroll */}
       <section
         data-timeline-year="1824 vs 2024"
-        data-timeline-era="Parallel Eras"
+        data-timeline-era="Kỷ nguyên Song song"
         className="relative w-full h-[200vh] bg-[#050505]"
       >
         <div className="sticky top-0 w-full h-screen flex flex-col md:flex-row overflow-hidden">
@@ -212,7 +212,7 @@ export default function StruggleSection() {
       {/* Bóc Lột Vô Hình — 3-page Horizontal Chapter */}
       <div
         data-timeline-year="2026"
-        data-timeline-era="Digital Struggle"
+        data-timeline-era="Đấu tranh Số"
       >
         <HorizontalChapter
           bgClassName="bg-[#050505]"

@@ -66,7 +66,7 @@ export default function DigitalChapter() {
       <section
         ref={digitalChapterRef}
         data-timeline-year="1900 - 1999"
-        data-timeline-era="Automation Age"
+        data-timeline-era="Kỷ nguyên Tự động hóa"
         className="scroll-section w-screen min-h-screen relative bg-[#050505] flex flex-col md:flex-row items-stretch overflow-hidden border-y border-surface/10"
       >
         <div className="absolute inset-0 pointer-events-none z-10 scanlines opacity-20"></div>
@@ -101,7 +101,7 @@ export default function DigitalChapter() {
             initial={{ scale: 1.1, filter: "grayscale(1) contrast(1.2)" }}
             whileInView={{ scale: 1, filter: "grayscale(1) contrast(1.5)" }}
             transition={{ duration: 1.5 }}
-            alt="Digital control panel"
+            alt="Bảng điều khiển kỹ thuật số"
             className="w-full h-full object-cover grayscale contrast-[1.5] brightness-[0.7]"
             src="/images/digital.gif"
           />
@@ -125,7 +125,7 @@ export default function DigitalChapter() {
           </h2>
           <div className="w-px h-24 bg-error/50 mt-12 mb-6"></div>
           <p className="font-data-mono text-sm text-surface-container-lowest/40 uppercase tracking-widest">
-            System Monitored
+            HỆ THỐNG ĐÃ GIÁM SÁT
           </p>
         </motion.div>
       </section>
@@ -133,7 +133,7 @@ export default function DigitalChapter() {
       {/* Glass Cage — 4-page Horizontal Chapter */}
       <div
         data-timeline-year="2000 - 2026"
-        data-timeline-era="Digital Age"
+        data-timeline-era="Kỷ nguyên Số"
       >
         <HorizontalChapter
           bgClassName="bg-[#050505]"
@@ -150,9 +150,9 @@ export default function DigitalChapter() {
                   CMCN 4.0
                 </p>
                 <h1 className="font-headline-xl text-5xl md:text-7xl uppercase text-surface-container-lowest font-extrabold tracking-tighter leading-none">
-                  The Glass
+                  Chiếc Lồng
                   <br />
-                  <span className="text-primary">Cage</span>
+                  <span className="text-primary">Kính</span>
                 </h1>
 
                 {/* The Glass Cage Artwork Box - Thu nhỏ để tạo cảm giác nhỏ bé */}
@@ -164,7 +164,7 @@ export default function DigitalChapter() {
                   className="w-48 h-48 md:w-64 md:h-64 my-2 overflow-hidden border-2 border-on-surface bg-background/50 shadow-[4px_4px_0px_#271902] relative shrink-0"
                 >
                   <img
-                    alt="Worker in a digital cage"
+                    alt="Người lao động trong lồng kính kỹ thuật số"
                     className="w-full h-full object-cover contrast-110"
                     src="/images/glassCage.png"
                   />
