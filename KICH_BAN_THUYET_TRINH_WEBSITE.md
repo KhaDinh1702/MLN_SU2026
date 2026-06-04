@@ -85,18 +85,6 @@
 
 ## 🎬 SLIDE 6 — CHIẾC LỒNG KÍNH KỶ NGUYÊN SỐ (CMCN 4.0)
 
-### 1. Tiêu đề lớn (Title)
-**Chiếc Lồng Kính (The Glass Cage)**
-*Sự bóc lột tự nguyện trong kỷ nguyên số*
-
-### 2. Mô phỏng Giao diện Web (Web Visual Layout)
-> **Visual Layout:** Một chiếc hộp vuông viền đen sắc cạnh chứa hình ảnh người lao động đang ngồi lọt thỏm bên trong một lồng kính phát sáng ảo ảnh số. 
-
-### 3. Nội dung Trọng tâm (Key Points)
-*   **Khái niệm "Chiếc Lồng Kính":** Người lao động tự do làm việc tại nhà, quán cafe, nhưng thực chất bị giam lỏng bởi thuật toán kết nối.
-*   **Quyền lực Thuật toán:** Vô hình, lạnh lùng và **không thể thương lượng**.
-*   **Sự cô lập giai cấp:** Người lao động bị chia nhỏ thành các nguyên tử rời rạc sau màn hình, mất đi sự kết nối và đoàn kết giai cấp truyền thống.
-
 ### 4. Lời thuyết trình chi tiết (Speaking Script)
 > "Đến thời đại số CMCN 4.0, trang web giới thiệu hình ảnh ẩn dụ 'Chiếc lồng kính'. Người lao động số ngày nay có vẻ không bị giới hạn trong nhà xưởng, họ ngồi ở quán cafe đẹp đẽ, nhưng thực chất họ bị giam cầm trong những ô vuông màn hình. Sự cô lập này biến tập thể người lao động thành những nguyên tử rời rạc, làm suy yếu khả năng liên kết giai cấp và giúp giới chủ thuật toán dễ dàng thao túng hơn."
 
